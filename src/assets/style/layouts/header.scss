@@ -1,0 +1,167 @@
+#header {
+    position: sticky;
+    top: 0;
+    height: 140px;
+    width: 100%;
+    min-width: 1120px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    z-index: 99;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+
+    .left {
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px;
+        color: #000;
+        margin-left: 30px;
+
+        .logo {
+            width: auto;
+            padding: 0 18px;
+            height: 115px;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .nav-item {
+            width: auto;
+            height: 100%;
+            padding: 0 64px;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            opacity: 0.6;
+            position: relative;
+            color: #041646;
+            transition: all 1s;
+            cursor: pointer;
+
+            .page-links {
+                display: none;
+            }
+
+            &:hover {
+                opacity: 1;
+
+                .page-links {
+                    background-color: #fff;
+                    box-shadow: 0 2px 12px 0 #262931aa;
+                    position: absolute;
+                    top: 100px;
+                    left: 0;
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        padding-left: 12px;
+                        width: 180px;
+                        line-height: 48px;
+                        opacity: 0.6;
+                        transition: all 1s;
+
+                        &:hover {
+                            opacity: 1;
+                            background: #00000020;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 30px;
+
+        .connect {
+            padding: 0 30px;
+            margin-left: 12px;
+            position: relative;
+
+            .network-lists {
+                display: none;
+            }
+
+            &:hover {
+                .network-lists {
+                    background-color: #fff;
+                    box-shadow: 0 2px 12px 0 #26293155;
+                    width: 300px;
+                    position: absolute;
+                    top: 54px;
+                    right: 12px;
+                    padding: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    cursor: pointer;
+                    font-size: 14px;
+
+                    .network {
+                        padding-left: 12px;
+                        line-height: 36px;
+                        transition: all .5s;
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+
+                        img {
+                            width: 1.5em;
+                            height: 1.5em;
+                        }
+
+                        &:hover {
+                            background: #00000020;
+                        }
+                    }
+
+                    .disconnect-btn {
+                        margin-inline: auto;
+                        padding: 0 24px;
+                        width: 160px;
+                        border-radius: 50vmax;
+                        color: #000;
+                        font-weight: 600;
+                        line-height: 32px;
+                        border: 1px #000 solid;
+                        transition: all .5s;
+
+                        &:hover {
+                            color: #fff;
+                            background-color: #000;
+                        }
+                    }
+                }
+            }
+
+            .connect-btn {
+                padding: 12px 28px;
+                border-radius: 4px;
+                color: #000;
+                font-weight: 600;
+                line-height: 24px;
+                font-size: 16px;
+                border: 1px #000 solid;
+                transition: background-color 1s;
+
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
