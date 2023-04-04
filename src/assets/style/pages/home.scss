@@ -5,7 +5,7 @@
     align-items: center;
     flex-direction: column;
 
-    .intro {
+    #intro {
         padding: 0 24px;
         display: flex;
         align-items: flex-start;
@@ -207,7 +207,7 @@
         }
     }
 
-    .features {
+    #features {
         padding: 0 24px;
         display: flex;
         align-items: flex-start;
@@ -418,7 +418,7 @@
         }
     }
 
-    .team {
+    #team {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -737,7 +737,7 @@
         }
     }
 
-    .counter {
+    #counter {
         display: flex;
         align-items: center;
         justify-content: center;

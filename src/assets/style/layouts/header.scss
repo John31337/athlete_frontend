@@ -24,6 +24,10 @@
         margin-left: 30px;
 
         .logo {
+            @media screen and (max-width: 1350px) {
+                display: none;
+            }
+
             width: auto;
             padding: 0 18px;
             height: 115px;

@@ -15,24 +15,24 @@ export default function Header({ page }) {
                 <a className="logo" href="/">
                     <img src={logo} />
                 </a>
-                <div className="nav-item">
+                <a className="nav-item" href='#intro'>
                     NFTs
-                </div>
-                <div className="nav-item">
+                </a>
+                <a className="nav-item" href='#features'>
                     Marketplace
-                </div>
-                <div className="nav-item">
+                </a>
+                <a className="nav-item" href='#team'>
                     Team
-                </div>
+                </a>
                 <div className="nav-item">
-                    <span>Resources</span>
-                    <TriangleDownIcon boxSize={"12px"} />
+                    <a href='#counter'>Resources</a>
+                    {/* <TriangleDownIcon boxSize={"12px"} />
                     <div className="page-links">
                         <Link to="/">NFTs</Link>
                         <Link to="/explore">Marketplace</Link>
-                        <Link to="/nft_ranking">Team</Link>
+                        <Link to="#team">Team</Link>
                         <Link to="/nft_ranking">Resources</Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="right">

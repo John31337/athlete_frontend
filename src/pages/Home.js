@@ -72,7 +72,7 @@ export default function Home() {
 
   return (
     <div id="home">
-      <div className='intro'>
+      <section id='intro'>
         <div className="left">
           <div className='vector'>
             <img src={vector}/>
@@ -120,7 +120,7 @@ export default function Home() {
             }
           </SimpleGrid>
         </div>
-      </div>
+      </section>
       <div className='partners'>
           <div className='partner'>
             <img className='img' src={partner1}/>
@@ -141,7 +141,7 @@ export default function Home() {
             <img className='img' src={partner6}/>
           </div>
       </div>
-      <div className='features'>
+      <section id='features'>
         <div className="left">
           <div className='vector'>
             <img src={vector}/>
@@ -167,7 +167,7 @@ export default function Home() {
               </div>
             </div>
         </div>
-      </div>
+      </section>
       <div className='mint' style={{backgroundImage:`url(${section})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <div className='vector'>
           <img src={vector}/>
@@ -182,7 +182,7 @@ export default function Home() {
           <img src={desktop}/>
         </div>
       </div>
-      <div className='team'>
+      <section id='team'>
         <div className='vector'>
           <img src={vector}/>
         </div>        
@@ -221,7 +221,7 @@ export default function Home() {
             <img src={teamMark3}/>
           </div>
         </div>
-      </div>
+      </section>
       <div className='roadmap' style={{backgroundImage:`url(${section1})`}}>
         <div className='left'>
           <div className='vector'>
@@ -298,7 +298,7 @@ export default function Home() {
             </div>
           </div>
       </div>
-      <div className='counter'>
+      <section id='counter'>
         <div className='counterContainer'>
           <div className='icon'>
             <img src={school}/>
@@ -320,7 +320,7 @@ export default function Home() {
           <div className='number'>240</div>
           <div className='description'>proud parents</div>
         </div>
-      </div>
+      </section>
       <div className='join' style={{backgroundImage: `url(${section3})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <div className='title'>Join a world of fun</div>
         <div className='description'>Sign up today to create your personalized student athlete NFT and start tracking your athletic performance!</div>
