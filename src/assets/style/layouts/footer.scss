@@ -5,7 +5,7 @@
     background: #0F172A;
     color: #E2E8F0;
     padding: 0px 80px;
-    min-width: 1120px;
+    min-width: 1040px;
     
     .main {
         width: 100%;
@@ -15,14 +15,32 @@
         display: flex;
         align-items: flex-start;
 
+        @media (any-pointer: coarse) {
+            flex-direction: column;
+            padding-top: 20px;
+        }
+
         .left {
             width: 300px;
+
+            @media (any-pointer: coarse) {
+                width: 400px;
+            }
 
             .logo {
                 width: 96px;
 
+                @media (any-pointer: coarse) {
+                    width: 360px;
+                    padding: 80px 80px;
+                }
+
                 img {
                     width: 100%;
+
+                    @media (any-pointer: coarse) {
+                        width: 400px;
+                    }
                 }
             }
         }
@@ -34,6 +52,12 @@
             width: 100%;
             gap: 48px;
 
+            @media (any-pointer: coarse) {
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 80px;
+            }
+
             .navbar {
                 flex: 1;
                 .title {
@@ -42,6 +66,10 @@
                     font-weight: 500;
                     line-height: 110%;
                     margin-bottom: 24px;
+
+                    @media (any-pointer: coarse) {
+                        font-size: 45px;
+                    }
                 }
 
                 .item {
@@ -52,6 +80,10 @@
                     font-size: 16px;
                     line-height: 140%;
                     cursor: pointer;
+
+                    @media (any-pointer: coarse) {
+                        font-size: 36px;
+                    }
 
                     .button {
                         display: flex;
@@ -66,6 +98,12 @@
                         font-size: 12px;
                         line-height: 140%;
                         font-weight: 400;
+
+                        @media (any-pointer: coarse) {
+                            font-size: 24px;
+                            width: 80px;
+                            margin: 0px 24px;
+                        }
                     }
                 }
             }
@@ -84,10 +122,20 @@
         justify-content: space-between;
         align-items: center;
 
+        @media (any-pointer: coarse) {
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 30px 80px;
+        }
+
         .left {
             color: #E2E8F0;;
             font-weight: 300;
             font-size: 14px;
+
+            @media (any-pointer: coarse) {
+                font-size: 28px;
+            }
         }
 
         .right {
@@ -95,11 +143,19 @@
             display: flex;
             padding: 37px;
 
+            @media (any-pointer: coarse) {
+                justify-content: center;
+            }
+
             .item {
                 margin-left: 32px;
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 140%;
+
+                @media (any-pointer: coarse) {
+                    font-size: 36px;
+                }
             }
 
             img {

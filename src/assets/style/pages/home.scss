@@ -1,6 +1,6 @@
 #home {
     margin-inline: auto;
-    margin-top: 88px;
+    margin-top: 188px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -45,7 +45,7 @@
                 position: relative;
 
                 @media screen and (max-width: 1350px) {
-                    top: 115px;
+                    top: 130px;
                 }
             }
     
@@ -54,12 +54,26 @@
                 font-weight: 400;
                 margin-top: 32px;
                 color: #0F172A;
+
+                @media (any-pointer: coarse) {
+                    font-size: 36px;
+                    line-height: 64px;
+                    padding: 24px 0px;
+                }
             }
     
             .visitContainer {
                 display: flex;
                 flex-direction: row;
                 margin-top: 32px;
+
+                @media (any-pointer: coarse) {
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 36px;
+                }
+
                 .button {
                     background: #BC0203;
                     display: flex;
@@ -70,6 +84,11 @@
                     height: 64px;
                     border-radius: 8px;
                     cursor: pointer;
+
+                    @media (any-pointer: coarse) {
+                        width: 560px;
+                        height: 84px;
+                    }
                     
                     justify-content: center;
     
@@ -78,6 +97,11 @@
                     line-height: 24px;
                     letter-spacing: 0.5px;
                     color: #fff;
+
+                    @media (any-pointer: coarse) {
+                        font-size: 36px;
+                        padding: 48px;
+                    }
     
                     &:hover {
                         opacity: 0.7;
@@ -95,17 +119,30 @@
                     background: #fff;
                     color: #2563EB;
                     padding-left: 42px;
+
+                    @media (any-pointer: coarse) {
+                        padding-left: 0px;
+                    }
     
                     .text {
                         padding-left: 18px;
                         font-size: 20px;
                         line-height: 24px;
                         font-weight: 500;
+
+                        @media (any-pointer: coarse) {
+                            font-size: 32px;
+                        }
                     }
-    
-                    .icon {
+
+                    img {
                         width: 21px;
                         height: 21px;
+
+                        @media (any-pointer: coarse) {
+                            width: 32px;
+                            height: 32px;
+                        }
                     }
     
                     &:hover {
@@ -128,65 +165,123 @@
                 align-items: center;
                 padding-top: 80px;
             }
-    
-            .nft {
-                width: 196px;
-                height: 196px;
-                border-radius: 21px;
-                margin: 12px;
-                cursor: pointer;
-    
-                .description {
-                    background: #fff;
-                    height: 47px;
-                    bottom: 47px;
-                    position: relative;
-                    border-radius: 0px 0px 21px 21px;
-                    border: solid 1px #babad9;
-                    display: flex;
-                    align-items: center;
-                    padding: 12px;
-                    
-                    .nameAuthor {
-                        display: flex;
-                        flex-direction: column;
-                        color: #000;
-                        flex: 1;
-    
-                        .name {
-                            font-size: 12px;
-                            line-height: 10px;
-                            font-weight: 600;
-                        }
-                        .author {
-                            padding-top: 2px;
-                            font-size: 8px;
-                            font-weight: 300;
-                            line-height: 10px;
-                        }
-                    }
-    
-                    .price {
-                        display: flex;
-                        font-size: 18px;
-                        line-height: 10px;
-                        font-weight: 400;
-                        flex: 1;
-                        align-items: center;
-                        justify-content: flex-end;
-    
-                        .eth {
-                            height: 19px;
-                            width: 11px;
-                        }
-                    }
+
+            .nftContainer {
+                display: grid;
+                column-gap: 10px;
+                row-gap: 10px;
+                grid-template-columns: auto auto auto;
+
+                @media (any-pointer: coarse) {
+                    grid-template-columns: auto;
                 }
-    
-                &:hover {
-                    border: 3px solid #FE0405;
-                    filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.15));
+
+                .nft {
+                    width: 196px;
+                    height: 196px;
+                    border-radius: 21px;
+                    margin: 12px;
+                    cursor: pointer;
+
+                    @media (any-pointer: coarse) {
+                        width: 640px;
+                        height: 640px;
+                    }
+
+                    .nftIcon {
+                        @media (any-pointer: coarse) {
+                            width: 640px;
+                            height: 640px;
+                        }
+                    }
+        
+                    .description {
+                        background: #fff;
+                        height: 47px;
+                        bottom: 47px;
+                        position: relative;
+                        border-radius: 0px 0px 21px 21px;
+                        border: solid 1px #babad9;
+                        display: flex;
+                        align-items: center;
+                        padding: 12px;
+
+                        @media (any-pointer: coarse) {
+                            height: 120px;
+                            bottom: 120px;
+                        }
+                        
+                        .nameAuthor {
+                            display: flex;
+                            flex-direction: column;
+                            color: #000;
+                            flex: 1;
+        
+                            .name {
+                                font-size: 12px;
+                                line-height: 10px;
+                                font-weight: 600;
+
+                                @media (any-pointer: coarse) {
+                                    font-size: 36px;
+                                    line-height: 30px;
+                                }
+                            }
+                            .author {
+                                padding-top: 2px;
+                                font-size: 8px;
+                                font-weight: 300;
+                                line-height: 10px;
+
+                                @media (any-pointer: coarse) {
+                                    font-size: 30px;
+                                    line-height: 36px;
+                                }
+                            }
+                        }
+        
+                        .price {
+                            display: flex;
+                            font-size: 18px;
+                            line-height: 10px;
+                            font-weight: 400;
+                            flex: 1;
+                            align-items: center;
+                            justify-content: flex-end;
+
+                            @media (any-pointer: coarse) {
+                                font-size: 54px;
+                                line-height: 30px;
+                            }
+        
+                            .eth {
+                                display: flex;
+                                height: 19px;
+                                width: 11px;
+
+                                @media (any-pointer: coarse) {
+                                    height: 57px;
+                                    width: 57px;
+                                }
+
+                                .ethIcon {
+                                    @media (any-pointer: coarse) {
+                                        height: 57px;
+                                        width: 57px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+        
+                    &:hover {
+                        border: 3px solid #FE0405;
+                        filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.15));
+                    }
                 }
             }
+    
+
         }
     }
 
@@ -212,6 +307,10 @@
         display: flex;
         align-items: flex-start;
         height: 640px;
+
+        @media (any-pointer: coarse) {
+            height: 1540px;
+        }
 
         @media screen and (max-width: 1350px) {
             flex-direction: column;
@@ -255,6 +354,11 @@
                 font-weight: 400;
                 margin-top: 32px;
                 color: #0F172A;
+
+                @media (any-pointer: coarse) {
+                    font-size: 36px;
+                    line-height: 64px;
+                }
             }
     
             .button {
@@ -282,25 +386,95 @@
                 .forward {
                     margin-left: 12px;
                 }
+
+                @media (any-pointer: coarse) {
+                    font-size: 36px;
+                    line-height: 36px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                }
             }            
         }
     
         .right {
-            display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
             align-items: center;
             margin-right: 30px;
-            flex-direction: column;
+            flex-direction: column-reverse;
             flex: 1;
+
+            @media (any-pointer: coarse) {
+                display: flex;
+                height: 1360px;
+                width: 100%;
+                margin: 80px; 
+                justify-content: center;
+                background-position: center !important;
+            }
+
+            .imgContainer {
+                position: relative;
+                @media (any-pointer: coarse) {
+                    position: static;
+                }
+                .img1 {
+                    position: relative;
+                    top: 140px;
+                    left: 540px;
+                    height: 186px;
     
-            .img {
-                height: 100%;
+                    @media (any-pointer: coarse) {
+                        height: 360px;
+                        position: static;
+                    }
+                }
+    
+                .img2 {
+                    position: relative;
+                    top: 20px;
+                    left: 680px;
+                    height: 80px;
+    
+                    @media (any-pointer: coarse) {
+                        height: 160px;
+                        top: -240px;
+                        left: 280px;
+                    }
+                }
+            }
+    
+
+
+            .img3 {
+                position: relative;
+                top: 40px;
+                left: 520px;
+                height: 180px;
+
+                @media (any-pointer: coarse) {
+                    position: static;
+                    height: 360px;
+                }
+            }
+
+            .img4 {
+                position: relative;
+                bottom: 140px;
+                left: 320px;
+                height: 180px;
+
+                @media (any-pointer: coarse) {
+                    position: static;
+                    height: 360px;
+                }
             }
 
             .create {
                 padding: 24px 18px;
                 position: relative;
-                bottom: 520px;
+                bottom: 560px;
+                left: 260px;
                 flex-direction: column;
                 display: flex;
                 background: #fff;
@@ -311,6 +485,14 @@
                 border-radius: 10px;
                 z-index: 6;
                 order: 6;
+
+                @media (any-pointer: coarse) {
+                    position: static;
+                    height: 540px;
+                    width: 540px;
+                    margin: 40px;
+                    padding: 30px;
+                }
 
                 .header {
                     background: #DBEAFE;
@@ -325,6 +507,12 @@
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 140%;
+
+                    @media (any-pointer: coarse) {
+                        font-size: 36px;
+                        width: 280px;
+                        height: 48px;
+                    }
                 }
 
                 .title {
@@ -334,6 +522,11 @@
                     line-height: 110%;
                     color: #0F172A;
                     padding-top: 8px;
+
+                    @media (any-pointer: coarse) {
+                        font-size: 40px;
+                        padding-top: 20px;
+                    }
                 }
 
                 .description {
@@ -343,6 +536,11 @@
                     line-height: 140%;
                     color: #475569;
                     padding-top: 8px;
+
+                    @media (any-pointer: coarse) {
+                        font-size: 28px;
+                        padding-top: 20px;
+                    }
                 }
 
                 .btnContainer {
@@ -350,6 +548,10 @@
                     padding: 8px 8px 16px 16px;
                     align-items: center;
                     justify-content: center;
+
+                    @media (any-pointer: coarse) {
+                        padding: 30px;
+                    }
 
                     .button {
                         color: #2563EB;
@@ -361,6 +563,11 @@
                         border: 1px solid #2563EB;
                         border-radius: 8px;
                         cursor: pointer;
+
+                        @media (any-pointer: coarse) {
+                            font-size: 28px;
+                            padding: 20px 50px;
+                        }
 
                         &:hover {
                             opacity: 0.7;
@@ -383,6 +590,10 @@
             margin-top: 360px;
         }
 
+        @media (any-pointer: coarse) {
+            justify-content: center;
+        }
+
         .title {
             font-size: 72px;
             font-weight: 800;
@@ -401,6 +612,11 @@
             @media screen and (max-width: 1350px) {
                 text-align: center;
             }
+
+            @media (any-pointer: coarse) {
+                font-size: 36px;
+                line-height: 64px;
+            }
         }
 
         .vector {
@@ -415,6 +631,23 @@
 
         .desktop {
             padding-top: 24px;
+            @media (any-pointer: coarse) {
+                display: none;
+            }
+        }
+
+        .desktop1 {
+            @media (any-pointer: fine) {
+                display: none;
+            }
+
+            @media (any-pointer: coarse) {
+                width: 80%;
+            }
+
+            img {
+                width: 100%;
+            }
         }
     }
 
@@ -446,6 +679,11 @@
             padding-top: 80px;
             width: 80%;
 
+            @media (any-pointer: coarse) {
+                flex-direction: column;
+                align-items: center;
+            }
+
             .potrait {
                 display: flex;
                 flex-direction: column;
@@ -459,9 +697,19 @@
                 border: 5px solid #FFFFFF;
                 filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.07));
 
+                @media (any-pointer: coarse) {
+                    width: 360px;
+                    height: 360px;
+                }
+
                 img {
                     width: 176px;
                     height: 176px;
+
+                    @media (any-pointer: coarse) {
+                        width: 360px;
+                        height: 360px;
+                    }
                 }
 
                 .name {
@@ -469,6 +717,11 @@
                     line-height: 32px;
                     font-weight: 700;
                     color: #041646;
+
+                    @media (any-pointer: coarse) {
+                        font-size: 63px;
+                        line-height: 96px;
+                    }
                 }
                 
                 .description {
@@ -477,6 +730,11 @@
                     color: #52525B;
                     font-weight: 400;
                     text-align: center;
+
+                    @media (any-pointer: coarse) {
+                        font-size: 36px;
+                        line-height: 64px;
+                    }
                 }
             }
         }
@@ -488,6 +746,10 @@
 
         .markContainer {
             display: flex;
+            @media (any-pointer: coarse) {
+                flex-direction: column;
+                gap: 80px;
+            }
 
             .mark {
                 cursor: pointer;
@@ -495,6 +757,7 @@
                 justify-content: center;
                 flex: 1;
                 padding: 0px 80px;
+
                 img {
                     height: 100%;
                 }
@@ -518,7 +781,6 @@
             height: 100%;
             padding-top: 164px;
 
-            
             @media screen and (max-width: 1350px) {
                 padding-top: 0px;
             }
@@ -542,6 +804,10 @@
                 font-weight: 400;
                 margin-top: 32px;
                 color: #0F172A;
+
+                @media (any-pointer: coarse) {
+                    font-size: 36px;
+                }
             }
 
             .vector {
@@ -559,11 +825,20 @@
             margin-right: 30px;
             flex: 1.5;
 
+            @media (any-pointer: coarse) {
+                margin-right: 0px;
+                width: 80%;
+            }
+
             .cardContainer {
                 display: flex;
                 flex-direction: column;
-                padding-right: 105px;
+                padding: 0px 105px 0px 0px;
                 width: 100%;
+
+                @media (any-pointer: coarse) {
+                    padding: 40px;
+                }
 
                 .card {
                     display: flex;
@@ -575,21 +850,42 @@
                     padding: 24px 24px 18px 42px;
                     margin-top: 44px;
 
+                    @media (any-pointer: coarse) {
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        height: 650px;
+                        padding: 40px;
+                    }
+
                     .ellipse {
                         display: flex;
                         flex: 1;
+
                         img {
                             height: 70%;
+                            @media (any-pointer: coarse) {
+                                height: 200px;
+                            }
                         }
                     }
 
                     .phaseContainer {
                         flex: 3;
+                        @media (any-pointer: coarse) {
+                            align-items: center;
+                            display: flex;
+                            flex-direction: column;
+                        }
                         .subtitle {
                             font-size: 18px;
                             line-height: 180%;
                             font-weight: 500;
                             color: #717171;
+
+                            @media (any-pointer: coarse) {
+                                font-size: 42px;
+                            }
                         }
 
                         .title {
@@ -598,6 +894,10 @@
                             font-weight: 700;
                             color: #041646;
                             padding-left: 1px;
+
+                            @media (any-pointer: coarse) {
+                                font-size: 52px;
+                            }
                         }
 
                         .description {
@@ -606,6 +906,10 @@
                             font-weight: 500;
                             color: #444444;
                             padding-top: 14px;
+
+                            @media (any-pointer: coarse) {
+                                font-size: 36px;
+                            }
                         }
                     }
                 }
@@ -614,6 +918,10 @@
             .schedule {
                 display: flex;
                 flex-direction: column;
+
+                @media (any-pointer: coarse) {
+                    display: none;
+                }
                 
                 img {
                     height: 100%;
@@ -642,9 +950,28 @@
             flex: 1;
             padding: 80px;
 
+            @media (any-pointer: coarse) {
+                width: 720px;
+                padding: 50px;
+            }
+
             .imgContainer {
+                @media (any-pointer: coarse) {
+                    display: none;
+                }
+
                 img {
                     width: 100%;
+                }
+            }
+
+            .imgContainer1 {
+                @media (any-pointer: fine) {
+                    display: none;
+                }
+                
+                img {
+                    width: 720px;
                 }
             }
         }
@@ -686,6 +1013,10 @@
 
                 @media screen and (max-width: 1350px) {
                     text-align: center;
+                }
+
+                @media (any-pointer: coarse) {
+                    font-size: 36px;
                 }
             }
 
@@ -733,6 +1064,10 @@
                     align-items: center;
                     justify-content: center;
                 }
+
+                @media (any-pointer: coarse) {
+                    font-size: 42px;
+                }
             }   
         }
     }
@@ -747,12 +1082,21 @@
         padding: 80px;
         background: #041646;
 
+        @media (any-pointer: coarse) {
+            flex-direction: column;
+            height: 840px;
+        }
+
         .counterContainer {
             display: flex;
             flex: 1;
             width: 100%;
             flex-direction: column;
             align-items: center;
+
+            @media (any-pointer: coarse) {
+                gap: 24px;
+            }
 
             .icon {
                 img {
@@ -772,6 +1116,10 @@
                 line-height: 160%;
                 color: #FACC15;
                 font-weight: 400;
+
+                @media (any-pointer: coarse) {
+                    font-size: 36px;
+                }
             }
         }
     }
@@ -783,6 +1131,11 @@
         padding: 256px 80px;
         align-content: center;
         align-items: center;
+
+        @media (any-pointer: coarse) {
+            height: 640px;
+            justify-content: center;
+        }
 
         .title {
             font-size: 72px;
@@ -797,6 +1150,11 @@
             font-weight: 400;
             margin-top: 32px;
             color: #0F172A;
+
+            @media (any-pointer: coarse) {
+                font-size: 36px;
+                text-align: center;
+            }
         }
 
         .button {
@@ -818,6 +1176,13 @@
             line-height: 24px;
             letter-spacing: 0.5px;
             color: #fff;
+
+            @media (any-pointer: coarse) {
+                font-size: 42px;
+                width: 480px;
+                height: 84px;
+                text-align: center;
+            }
 
             &:hover {
                 opacity: 0.7;

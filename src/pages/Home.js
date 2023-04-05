@@ -1,10 +1,10 @@
 import React, { useState, useContext, useEffect } from 'react';
+import { isMobile } from 'react-device-detect';
 import { useNavigate } from 'react-router';
 import { Wallet } from '../providers/WalletProvider';
 import { useToast } from "@chakra-ui/react";
 import { getNFTs } from '../utils/contractFunctions';
 import { ArrowForwardIcon } from '@chakra-ui/icons'
-import { SimpleGrid } from '@chakra-ui/react';
 import 'swiper/css';
 
 import videoIcon from "../assets/img/video.svg";
@@ -19,9 +19,14 @@ import partner4 from "../assets/img/partner4.png";
 import partner5 from "../assets/img/partner5.png";
 import partner6 from "../assets/img/partner6.png";
 
-import features from "../assets/img/features.png";
+import section4 from "../assets/img/section4.png";
+import feature1 from "../assets/img/feature1.png";
+import feature2 from "../assets/img/feature2.png";
+import feature3 from "../assets/img/feature3.png";
+import feature4 from "../assets/img/feature4.png";
 
 import desktop from "../assets/img/mint.png";
+import desktop1 from "../assets/img/mint1.png";
 import section from "../assets/img/Section.png";
 
 import dev1 from "../assets/img/dev1.png";
@@ -42,6 +47,7 @@ import roadmap from "../assets/img/roadmap.png";
 
 import section2 from "../assets/img/section2.png";
 import concept from "../assets/img/concept.png";
+import concept1 from "../assets/img/concept1.png";
 
 import school from "../assets/img/school.png";
 import diamond from "../assets/img/diamond.png";
@@ -70,6 +76,8 @@ export default function Home() {
     getCollections();
   }, [isConnected, networkId])
 
+  console.log(isMobile);
+
   return (
     <div id="home">
       <section id='intro'>
@@ -96,12 +104,12 @@ export default function Home() {
           </div>
         </div>
         <div className="right">
-          <SimpleGrid columns={[3, null, 3]}>
+          <div className='nftContainer'>
             {
               nfts.map(nft => {
                 return(
                   <div className='nft'>
-                    <img src={nftSample}/>
+                    <img className='nftIcon' src={nftSample}/>
                     <div className='description'>
                       <div className='nameAuthor'>
                         <div className='name'>{nft.name}</div>
@@ -110,7 +118,7 @@ export default function Home() {
                       <div className='price'>
                         {nft.price}
                         <div className='eth'>
-                          <img src={ethIcon}/>
+                          <img className='ethIcon' src={ethIcon}/>
                         </div>
                       </div>
                     </div>
@@ -118,7 +126,7 @@ export default function Home() {
                 )
               })
             }
-          </SimpleGrid>
+          </div>
         </div>
       </section>
       <div className='partners'>
@@ -154,18 +162,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='right'>
-            <div className='img'>
-              <img src={features}/>
-              <div className='create'>
-                <div className='header'>Dynamic NFTs</div>
-                <div className='title'>Track your progress as an athlete!</div>
-                <div className='description'>Aliquam ut euismod condimentum elementum ultricies volutpat sit non. </div>
-                <div className='btnContainer'>
-                  <div className='button'>Create your NFT</div>
-                </div>
-              </div>
+        <div className='right' style={{backgroundImage:`url(${section4})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center top'}}>
+          <div className='imgContainer'>
+            <img className='img1' src={feature1}/>
+            <img className='img2' src={feature2}/>
+          </div>
+          <img className='img3' src={feature3}/>
+          <img className='img4' src={feature4}/>
+          <div className='create'>
+            <div className='header'>Dynamic NFTs</div>
+            <div className='title'>Track your progress as an athlete!</div>
+            <div className='description'>Aliquam ut euismod condimentum elementum ultricies volutpat sit non. </div>
+            <div className='btnContainer'>
+              <div className='button'>Create your NFT</div>
             </div>
+          </div>
         </div>
       </section>
       <div className='mint' style={{backgroundImage:`url(${section})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
@@ -180,6 +191,9 @@ export default function Home() {
         </div>
         <div className='desktop'>
           <img src={desktop}/>
+        </div>
+        <div className='desktop1'>
+          <img src={desktop1}/>
         </div>
       </div>
       <section id='team'>
@@ -283,6 +297,9 @@ export default function Home() {
           <div className='left' style={{backgroundImage:`url(${section2})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
             <div className='imgContainer'>
               <img src={concept}></img>
+            </div>
+            <div className='imgContainer1'>
+              <img src={concept1}/>
             </div>
           </div>
           <div className='right'>
