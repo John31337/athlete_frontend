@@ -20,10 +20,7 @@ import partner5 from "../assets/img/partner5.png";
 import partner6 from "../assets/img/partner6.png";
 
 import section4 from "../assets/img/section4.png";
-import feature1 from "../assets/img/feature1.png";
-import feature2 from "../assets/img/feature2.png";
-import feature3 from "../assets/img/feature3.png";
-import feature4 from "../assets/img/feature4.png";
+import features from "../assets/img/features.png";
 
 import desktop from "../assets/img/mint.png";
 import desktop1 from "../assets/img/mint1.png";
@@ -164,11 +161,8 @@ export default function Home() {
         </div>
         <div className='right' style={{backgroundImage:`url(${section4})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center top'}}>
           <div className='imgContainer'>
-            <img className='img1' src={feature1}/>
-            <img className='img2' src={feature2}/>
+            <img src={features}/>
           </div>
-          <img className='img3' src={feature3}/>
-          <img className='img4' src={feature4}/>
           <div className='create'>
             <div className='header'>Dynamic NFTs</div>
             <div className='title'>Track your progress as an athlete!</div>

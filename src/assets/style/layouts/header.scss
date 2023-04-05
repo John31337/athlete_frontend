@@ -19,6 +19,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (any-pointer: coarse) {
+            height: 300px;
+        }
     
         .left {
             height: 200px;
@@ -32,10 +36,11 @@
             .logo {
                 @media (any-pointer: coarse) {
                     display: flex;
+                    height: 300px;
                 }
     
                 width: auto;
-                padding: 0 18px;
+                padding: 36px;
                 height: 115px;
     
                 img {

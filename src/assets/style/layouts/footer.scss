@@ -10,39 +10,13 @@
     .main {
         width: 100%;
         margin-inline: auto;
-        margin: 0px 80px;
         padding-top: 80px;
         display: flex;
         align-items: flex-start;
 
         @media (any-pointer: coarse) {
             flex-direction: column;
-            padding-top: 20px;
-        }
-
-        .left {
-            width: 300px;
-
-            @media (any-pointer: coarse) {
-                width: 400px;
-            }
-
-            .logo {
-                width: 96px;
-
-                @media (any-pointer: coarse) {
-                    width: 360px;
-                    padding: 80px 80px;
-                }
-
-                img {
-                    width: 100%;
-
-                    @media (any-pointer: coarse) {
-                        width: 400px;
-                    }
-                }
-            }
+            padding-top: 100px;
         }
 
         .right {
@@ -53,9 +27,26 @@
             gap: 48px;
 
             @media (any-pointer: coarse) {
-                flex-direction: column;
-                justify-content: center;
-                padding-left: 80px;
+                display: grid;
+                column-gap: 30px;
+                row-gap: 30px;
+                grid-template-columns: auto auto auto;
+            }
+
+            .logo {
+                width: 96px;
+
+                @media (any-pointer: coarse) {
+                    width: 240px;
+                }
+
+                img {
+                    width: 100%;
+
+                    @media (any-pointer: coarse) {
+                        width: 200px;
+                    }
+                }
             }
 
             .navbar {
@@ -68,7 +59,7 @@
                     margin-bottom: 24px;
 
                     @media (any-pointer: coarse) {
-                        font-size: 45px;
+                        font-size: 42px;
                     }
                 }
 
@@ -82,7 +73,9 @@
                     cursor: pointer;
 
                     @media (any-pointer: coarse) {
-                        font-size: 36px;
+                        font-size: 32px;
+                        line-height: 72px;
+                        flex-direction: column;
                     }
 
                     .button {
@@ -134,7 +127,7 @@
             font-size: 14px;
 
             @media (any-pointer: coarse) {
-                font-size: 28px;
+                font-size: 32px;
             }
         }
 

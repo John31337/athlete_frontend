@@ -11,7 +11,7 @@ export default function Header({ page }) {
     const { account, isConnected, changeNetwork, connect, disconnect } = useContext(Wallet);
     const [showNav, setShowNav] = useState(false);
     return (
-        <div id='headerContainer' style={{height: showNav ? '500px': '200px'}}>
+        <div id='headerContainer' style={{height: showNav ? '500px': '360px'}}>
             <div id="header">
                 <div className="left">
                     <a className="logo" href="/">

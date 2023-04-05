@@ -7,12 +7,12 @@ export default function Footer() {
     return (
         <div id="footer">
             <div className="main">
-                <div className="left">
-                    <div className="logo">
-                        <a href="/"><img src={logo} /></a>
-                    </div>
-                </div>
                 <div className="right">
+                    <div className="navbar">
+                        <div className="logo">
+                            <a href="/"><img src={logo} /></a>
+                        </div>
+                    </div>
                     <div className="navbar">
                         <div className="title">
                             Product
