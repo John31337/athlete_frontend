@@ -32,8 +32,7 @@
             .title {
                 font-size: 72px;
                 font-weight: 800;
-                padding-top: 120px;
-
+                
                 @media screen and (max-width: 1350px) {
                     padding-top: 0px;
                 }
@@ -41,6 +40,7 @@
                 @media (any-pointer: coarse) {
                     font-size: 96px;
                     line-height: 120%;
+                    padding-top: 120px;
                 }
 
                 color: #041646;
@@ -54,7 +54,8 @@
                 position: relative;
 
                 @media screen and (max-width: 1350px) {
-                    top: 130px;
+                    top: 240px;
+                    width: 350px;
                 }
             }
     
@@ -327,7 +328,7 @@
     }
 
     #features {
-        padding: 0 24px;
+        padding: 24 54px;
         display: flex;
         align-items: flex-start;
         height: 640px;

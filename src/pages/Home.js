@@ -52,28 +52,58 @@ import heart from "../assets/img/heartCircle.png";
 
 import section3 from "../assets/img/section3.png";
 
+const nfts = [
+  {
+      name: 'Landynn OG1',
+      creator: "Arthur",
+      price: 1.2   
+  },
+  {
+      name: 'Landynn OG2',
+      creator: "Arthur",
+      price: 1.2   
+  },
+  {
+      name: 'Landynn OG3',
+      creator: "Arthur",
+      price: 1.2   
+  },
+  {
+      name: 'Landynn OG4',
+      creator: "Arthur",
+      price: 1.2   
+  },
+  {
+      name: 'Landynn OG5',
+      creator: "Arthur",
+      price: 1.2   
+  },
+  {
+      name: 'Landynn OG6',
+      creator: "Arthur",
+      price: 1.2   
+  },
+  {
+      name: 'Landynn OG7',
+      creator: "Arthur",
+      price: 1.2   
+  },
+  {
+      name: 'Landynn OG8',
+      creator: "Arthur",
+      price: 1.2   
+  },
+  {
+      name: 'Landynn OG9',
+      creator: "Arthur",
+      price: 1.2   
+  }
+]
+
 export default function Home() {
   const { networkId, isConnected } = useContext(Wallet);
   const toast = useToast();
   const navigate = useNavigate();
-  const [nfts, setNFTs] = useState([]);
-
-  const getCollections = async () => {
-    if (!isConnected) return;
-    try {
-      const nfts = await getNFTs(networkId);
-      console.log(nfts);
-      setNFTs(nfts);
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
-  useEffect(() => {
-    getCollections();
-  }, [isConnected, networkId])
-
-  console.log(isMobile);
 
   return (
     <div id="home">

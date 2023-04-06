@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Wallet } from '../providers/WalletProvider';
 import { CloseIcon, HamburgerIcon, TriangleDownIcon } from "@chakra-ui/icons";
-import { Divider, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, useDisclosure, ModalHeader } from '@chakra-ui/react';
+import { Divider, Modal, ModalContent, useDisclosure, ModalHeader } from '@chakra-ui/react';
 import logo from "../assets/img/logo.png";
 import eth from "../assets/img/eth.png";
 import polygon from "../assets/img/polygon.png";

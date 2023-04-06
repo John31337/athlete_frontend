@@ -149,20 +149,20 @@ const WalletProvider = ({ children }) => {
         setIsConnected(false);
     }
 
-    useEffect(() => {
-        if (window.ethereum) {
-            window.ethereum.on("chainChanged", () => {
-                loadWallet();
-            });
-            window.ethereum.on("accountsChanged", () => {
-                loadWallet();
-            });
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (window.ethereum) {
+    //         window.ethereum.on("chainChanged", () => {
+    //             loadWallet();
+    //         });
+    //         window.ethereum.on("accountsChanged", () => {
+    //             loadWallet();
+    //         });
+    //     }
+    // }, []);
 
-    useEffect(() => {
-        connect();
-    }, [])
+    // useEffect(() => {
+    //     connect();
+    // }, [])
 
     return (
         <Wallet.Provider value={{ account, balance, networkId, isConnected, changeNetwork, connect, disconnect }}>
