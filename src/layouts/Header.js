@@ -27,7 +27,7 @@ export default function Header({ page }) {
                         Team
                     </a>
                     <div className="nav-item">
-                        <a href='#counter'>Resources</a>
+                        <a href='#counter'>White Paper</a>
                          <TriangleDownIcon boxSize={"12px"} />
                         {/*<div className="page-links">
                             <Link to="/">NFTs</Link>

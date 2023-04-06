@@ -6,7 +6,7 @@
     flex-direction: column;
 
     #intro {
-        padding: 0 24px;
+        padding: 24px 54px;
         display: flex;
         align-items: flex-start;
 
@@ -50,7 +50,7 @@
 
             .vector {
                 width: 190px;
-                top: 235px;
+                top: 120px;
                 position: relative;
 
                 @media screen and (max-width: 1350px) {
@@ -331,28 +331,36 @@
         padding: 24 54px;
         display: flex;
         align-items: flex-start;
-        height: 640px;
+        height: 600px;
 
         @media screen and (max-width: 1350px) {
             flex-direction: column;
             align-items: center;
-            height: 2040px;
+        }
+
+        @media (any-pointer: coarse) {
+            height: 2200px;
+            gap: 80px;
         }
 
         .left {
-            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
             gap: 12px;
             margin: 0px 80px;
-            flex: 1;
+            
+
+            @media (any-pointer: fine) {
+                flex: 1;
+            }
 
             @media (any-pointer: coarse) {
                 font-size: 84px;
                 line-height: 120%;
-                margin: 60px;
+                margin: 60;
+                height: 1020px;
             }
     
             .title {
@@ -442,137 +450,146 @@
         }
     
         .right {
+            display: flex;
             justify-content: flex-start;
             align-items: center;
             margin-right: 30px;
             flex-direction: column-reverse;
-            flex: 1;
+            height: 100%;
+            width: 100%;
+
+            @media (any-pointer: fine) {
+                flex: 1;
+            }
 
             @media (any-pointer: coarse) {
                 display: flex;
-                height: 540px;
+                height: 960px;
                 width: 100%;
                 justify-content: center;
-                background-position: center !important;
+                background-image: none !important;
             }
 
             .imgContainer {
-                position: relative;
+                height: 100%;
+                position: static;
+                display: flex;
+                justify-content: center;
                 @media (any-pointer: coarse) {
-                    position: static;
-                    width: 90%;
+                    width: 100%;
+                    background-position: bottom !important;
                 }
 
                 img {
                     width: 100%;
                 }
-            }
 
-            .create {
-                padding: 24px 18px;
-                position: relative;
-                bottom: 540px;
-                left: 20px;
-                flex-direction: column;
-                display: flex;
-                background: #fff;
-                width: 225px;
-                height: 232px;
-                margin-left: 40px;
-                box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(0, 0, 0, 0.07);
-                border-radius: 10px;
-                z-index: 6;
-                order: 6;
-
-                @media (any-pointer: coarse) {
-                    position: static;
-                    height: 960px;
-                    width: 720px;
-                    margin: 40px;
-                    padding: 30px;
-                }
-
-                .header {
-                    background: #DBEAFE;
+                .create {
+                    padding: 24px 18px;
+                    margin-top: 40px;
+                    margin-right: 400px;
+                    flex-direction: column;
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 4px;
-                    width: 107px;
-                    height: 24px;
-                    padding: 8px 4px;
-                    color: #1E40AF;
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 140%;
-
+                    background: #fff;
+                    width: 225px;
+                    height: 232px;
+                    margin-left: 40px;
+                    box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(0, 0, 0, 0.07);
+                    border-radius: 10px;
+                    z-index: 6;
+                    order: 6;
+    
                     @media (any-pointer: coarse) {
-                        font-size: 42px;
-                        padding: 12px;
-                        width: 360px;
-                        height: 72px;
-                    }
-                }
-
-                .title {
-                    display: flex;
-                    font-size: 20px;
-                    font-weight: 500;
-                    line-height: 110%;
-                    color: #0F172A;
-                    padding-top: 8px;
-
-                    @media (any-pointer: coarse) {
-                        font-size: 54px;
-                        line-height: 72px;
-                        padding-top: 20px;
-                    }
-                }
-
-                .description {
-                    display: flex;
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 140%;
-                    color: #475569;
-                    padding-top: 8px;
-
-                    @media (any-pointer: coarse) {
-                        font-size: 42px;
-                        line-height: 64px;
-                        padding-top: 20px;
-                    }
-                }
-
-                .btnContainer {
-                    display: flex;
-                    padding: 8px 8px 16px 16px;
-                    align-items: center;
-                    justify-content: center;
-
-                    @media (any-pointer: coarse) {
+                        position: static;
+                        height: 720px;
+                        width: 720px;
+                        margin: 40px;
                         padding: 30px;
+                        gap: 15px;
                     }
-
-                    .button {
-                        color: #2563EB;
-                        padding: 8px 20px;
+    
+                    .header {
+                        background: #DBEAFE;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 4px;
+                        width: 107px;
+                        height: 24px;
+                        padding: 8px 4px;
+                        color: #1E40AF;
                         font-size: 14px;
-                        line-height: 24px;
+                        font-weight: 400;
+                        line-height: 140%;
+    
+                        @media (any-pointer: coarse) {
+                            font-size: 42px;
+                            padding: 12px;
+                            width: 360px;
+                            height: 72px;
+                        }
+                    }
+    
+                    .title {
+                        display: flex;
+                        font-size: 20px;
                         font-weight: 500;
-                        letter-spacing: 0.5px;
-                        border: 1px solid #2563EB;
-                        border-radius: 8px;
-                        cursor: pointer;
-
+                        line-height: 110%;
+                        color: #0F172A;
+                        padding-top: 8px;
+    
+                        @media (any-pointer: coarse) {
+                            font-size: 54px;
+                            line-height: 72px;
+                            padding-top: 20px;
+                        }
+                    }
+    
+                    .description {
+                        display: flex;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 140%;
+                        color: #475569;
+                        padding-top: 8px;
+    
                         @media (any-pointer: coarse) {
                             font-size: 42px;
                             line-height: 64px;
-                            padding: 20px 50px;
+                            padding-top: 20px;
                         }
-
-                        &:hover {
-                            opacity: 0.7;
+                    }
+    
+                    .btnContainer {
+                        display: flex;
+                        padding: 8px 8px 16px 16px;
+                        align-items: center;
+                        justify-content: center;
+    
+                        @media (any-pointer: coarse) {
+                            padding: 30px;
+                        }
+    
+                        .button {
+                            color: #2563EB;
+                            padding: 8px 20px;
+                            font-size: 14px;
+                            line-height: 24px;
+                            font-weight: 500;
+                            letter-spacing: 0.5px;
+                            border: 1px solid #2563EB;
+                            border-radius: 8px;
+                            cursor: pointer;
+    
+                            @media (any-pointer: coarse) {
+                                font-size: 42px;
+                                line-height: 64px;
+                                padding: 20px 50px;
+                            }
+    
+                            &:hover {
+                                opacity: 0.7;
+                            }
                         }
                     }
                 }
@@ -589,7 +606,7 @@
         padding: 80px 80px;
 
         @media screen and (max-width: 1350px) {
-            margin-top: 360px;
+            margin-top: 80px;
         }
 
         @media (any-pointer: coarse) {
@@ -981,7 +998,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            align-items: flex-start;
+            align-items: center;
             gap: 12px;
             margin: 0px 80px;
             flex: 1;

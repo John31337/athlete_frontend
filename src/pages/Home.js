@@ -115,17 +115,9 @@ export default function Home() {
           <div className="title">Create & collect student athlete trading cards</div>
           <div className="description">Introducing dynamic NFTs centered around your athletic club. Watch your student athlete NFT grow to reflect your real-life accomplishments.</div>
           <div className='visitContainer'>
-            <div className='button'>Visit the marketplace
+            <div className='button' onClick={() => {window.open("https://app.athleteclub.com");}}>Visit the marketplace
               <div className='forward'>
                 <ArrowForwardIcon/>
-              </div>
-            </div>
-            <div className='demoVideo'>
-              <div className='icon'>
-                <img src={videoIcon}/>
-              </div>
-              <div className='text'>
-                Demo Video
               </div>
             </div>
           </div>
@@ -190,15 +182,14 @@ export default function Home() {
           </div>
         </div>
         <div className='right' style={{backgroundImage:`url(${section4})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center top'}}>
-          <div className='imgContainer'>
-            <img src={features}/>
-          </div>
-          <div className='create'>
-            <div className='header'>Dynamic NFTs</div>
-            <div className='title'>Track your progress as an athlete!</div>
-            <div className='description'>Aliquam ut euismod condimentum elementum ultricies volutpat sit non. </div>
-            <div className='btnContainer'>
-              <div className='button'>Create your NFT</div>
+          <div className='imgContainer' style={{backgroundImage:`url(${features})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
+            <div className='create'>
+              <div className='header'>Dynamic NFTs</div>
+              <div className='title'>Track your progress as an athlete!</div>
+              <div className='description'>Aliquam ut euismod condimentum elementum ultricies volutpat sit non. </div>
+              <div className='btnContainer'>
+                <div className='button'>Create your NFT</div>
+              </div>
             </div>
           </div>
         </div>
@@ -260,7 +251,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className='roadmap' style={{backgroundImage:`url(${section1})`}}>
+      <div className='roadmap' style={{backgroundImage:`url(${section1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <div className='left'>
           <div className='vector'>
             <img src={vector}/>
