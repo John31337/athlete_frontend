@@ -27,8 +27,8 @@ export default function Header({ page }) {
                         Team
                     </a>
                     <div className="nav-item">
-                        <a href='#counter'>White Paper</a>
-                         <TriangleDownIcon boxSize={"12px"} />
+                        <a href='#counter' onClick={() => {window.open('https://drive.google.com/file/d/1LP9SVKWpAYGGJbtW_GLH0uj8fda1_ng4/view?usp=share_link')}}>White Paper</a>
+                         {/* <TriangleDownIcon boxSize={"12px"} /> */}
                         {/*<div className="page-links">
                             <Link to="/">NFTs</Link>
                             <Link to="/explore">Marketplace</Link>
