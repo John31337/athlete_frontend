@@ -32,8 +32,8 @@ button {
 }
 
 .page-content {
-    width: 100%;
-    min-width: 1040px;
+    // width: 100%;
+    // min-width: 1040px;
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -42,4 +42,12 @@ button {
 
 .pink {
     color: #fc2865;
+}
+
+.chakra-modal__content {
+    min-width: 1040px;
+}
+
+.chakra-modal__content-container {
+    width: 100% !important;
 }

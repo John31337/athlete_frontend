@@ -2,16 +2,16 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Wallet } from '../providers/WalletProvider';
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { Divider } from '@chakra-ui/react';
+import { Divider, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, useDisclosure, ModalHeader } from '@chakra-ui/react';
 import logo from "../assets/img/logo.png";
 import eth from "../assets/img/eth.png";
 import polygon from "../assets/img/polygon.png";
 
 export default function Header({ page }) {
     const { account, isConnected, changeNetwork, connect, disconnect } = useContext(Wallet);
-    const [showNav, setShowNav] = useState(false);
+    const { isOpen, onOpen, onClose } = useDisclosure();
     return (
-        <div id='headerContainer' style={{height: showNav ? '500px': '360px'}}>
+        <div id='headerContainer'>
             <div id="header">
                 <div className="left">
                     <a className="logo" href="/">
@@ -53,24 +53,36 @@ export default function Header({ page }) {
                                 : <button className="connect-btn" onClick={connect}>Connect</button>
                         }
                     </div>
-                    <div className='nav-icon' onClick={() => {setShowNav(!showNav)}}>
-                        {showNav ? <CloseIcon style={{height: '40px', width: '40px'}}/> : <HamburgerIcon style={{height: '60px', width: '60px'}}/>}
+                    <div className='nav-icon' onClick={() => {isOpen ? onClose() : onOpen()}}>
+                        {isOpen ? <CloseIcon style={{height: '40px', width: '40px'}}/> : <HamburgerIcon style={{height: '60px', width: '60px'}}/>}
                     </div>
                 </div>
             </div>
-            <div id="top-nav" style={{visibility: showNav ? 'visible' : 'hidden', height: showNav ? '200px': '0px'}}>
-                {
-                    isConnected
-                        ? <>
-                            <div className="connect-btn" onClick={disconnect}>{account.slice(0, 5)}...{account.slice(-4,)}</div>
-                        </>
-                        : <button className="connect-btn" onClick={connect}>Connect</button>
-                }
-                <div className='button'>NFTs</div>
-                <div className='button'>Marketplace</div>
-                <div className='button'>Team</div>
-                <div className='button'>Resources</div>
-            </div>
+            <Modal size='full' isOpen={isOpen} onClose={onClose}>
+                <ModalContent padding={'80px'} display={'flex'} flexDirection={'column'} gap={'48px'}>
+                    <ModalHeader style={{height: '250px', alignItems: 'center', display: 'flex', justifyContent: 'space-between'}}>
+                        <img src={logo} style={{height: '150px', width: '150px'}}/>
+                        <CloseIcon style={{height: '40px', width: '40px'}} onClick={onClose}/>
+                    </ModalHeader>
+                    
+                    <div style={{fontSize: '48px', }}>NFTs</div>
+                    <div style={{fontSize: '48px', }}>Marketplace</div>
+                    <div style={{fontSize: '48px', }}>Team</div>
+                    <div style={{fontSize: '48px', }}>Resources</div>
+
+                    <Divider marginY="6px" />
+
+                    {
+                        isConnected
+                            ? <>
+                                <div style={{fontSize: '48px', border: '4px solid #000', padding: '12px', borderRadius: '24px', display: 'flex', justifyContent: 'center', width: '450px'}} onClick={disconnect}>{account.slice(0, 5)}...{account.slice(-4,)}</div>
+                            </>
+                            : <button  style={{fontSize: '48px', border: '4px solid #000', padding: '12px', borderRadius: '24px', display: 'flex', justifyContent: 'center', width: '450px'}} onClick={connect}>Connect Wallet</button>
+                    }
+
+                </ModalContent>
+
+            </Modal>
         </div>
     )
 }
