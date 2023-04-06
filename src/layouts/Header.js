@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Wallet } from '../providers/WalletProvider';
-import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { CloseIcon, HamburgerIcon, TriangleDownIcon } from "@chakra-ui/icons";
 import { Divider, Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, useDisclosure, ModalHeader } from '@chakra-ui/react';
 import logo from "../assets/img/logo.png";
 import eth from "../assets/img/eth.png";
@@ -28,8 +28,8 @@ export default function Header({ page }) {
                     </a>
                     <div className="nav-item">
                         <a href='#counter'>Resources</a>
-                        {/* <TriangleDownIcon boxSize={"12px"} />
-                        <div className="page-links">
+                         <TriangleDownIcon boxSize={"12px"} />
+                        {/*<div className="page-links">
                             <Link to="/">NFTs</Link>
                             <Link to="/explore">Marketplace</Link>
                             <Link to="#team">Team</Link>
@@ -50,7 +50,7 @@ export default function Header({ page }) {
                                         <button className="disconnect-btn" onClick={disconnect}>Disconnect</button>
                                     </div>
                                 </>
-                                : <button className="connect-btn" onClick={connect}>Connect</button>
+                                : <button className="connect-btn" onClick={() => {window.open("https://app.athleteclub.com");}}>Go to app</button>
                         }
                     </div>
                     <div className='nav-icon' onClick={() => {isOpen ? onClose() : onOpen()}}>
