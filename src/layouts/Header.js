@@ -75,9 +75,9 @@ export default function Header({ page }) {
                     {
                         isConnected
                             ? <>
-                                <div style={{fontSize: '48px', border: '4px solid #000', padding: '12px', borderRadius: '24px', display: 'flex', justifyContent: 'center', width: '450px'}} onClick={disconnect}>{account.slice(0, 5)}...{account.slice(-4,)}</div>
+                                <div style={{fontSize: '48px', border: '4px solid #000', padding: '12px', borderRadius: '24px', display: 'flex', justifyContent: 'center', width: '450px'}}>{account.slice(0, 5)}...{account.slice(-4,)}</div>
                             </>
-                            : <button  style={{fontSize: '48px', border: '4px solid #000', padding: '12px', borderRadius: '24px', display: 'flex', justifyContent: 'center', width: '450px'}} onClick={connect}>Connect Wallet</button>
+                            : <button  style={{fontSize: '48px', border: '4px solid #000', padding: '12px', borderRadius: '24px', display: 'flex', justifyContent: 'center', width: '450px'}} onClick={() => {window.open("https://app.athleteclub.com");}}>Go to app</button>
                     }
 
                 </ModalContent>
