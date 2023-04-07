@@ -30,11 +30,12 @@
                 display: grid;
                 column-gap: 30px;
                 row-gap: 30px;
+                justify-content: center;
                 grid-template-columns: auto auto auto;
             }
 
             .logo {
-                width: 103px;
+                width: 120px;
                 background: #0F172A;
 
                 @media (any-pointer: coarse) {
@@ -42,11 +43,7 @@
                 }
 
                 img {
-                    width: 100%;
-
-                    @media (any-pointer: coarse) {
-                        width: 200px;
-                    }
+                    width: 240px;
                 }
             }
 
@@ -95,7 +92,7 @@
 
                         @media (any-pointer: coarse) {
                             font-size: 24px;
-                            width: 120px;
+                            width: 160px;
                             margin: 0px 24px;
                         }
                     }
@@ -147,14 +144,16 @@
                 font-size: 16px;
                 line-height: 140%;
                 cursor: pointer;
-
                 @media (any-pointer: coarse) {
-                    font-size: 36px;
+                    font-size: 30px;
                 }
             }
 
             img {
                 width: 24px;
+                @media (any-pointer: coarse) {
+                    width: 36px;
+                }
             }
         }
     }
