@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../assets/img/logo.png";
 import world from "../assets/img/world.svg";
+import twitter from "../assets/img/twitter.png";
+import telegram from "../assets/img/telegram.png";
+import medium from "../assets/img/medium.png";
 
 export default function Footer() {
     return (
@@ -17,20 +20,37 @@ export default function Footer() {
                         <div className="title">
                             Product
                         </div>
-                        <Link className="item" to="">
+                        <Link className="item" to="http://github.com">
                             NFTs
                         </Link>
-                        <Link className="item" to="/discover">
+                        <Link className="item" to="https://chain.link/education-hub/what-is-dynamic-nft">
                             Features
                         </Link>
-                        <a className="item">
+                        <Link className="item" to="https://app.nftathleteclub.com">
                             Marketplace
-                        </a>
+                        </Link>
                         <a className="item">
                             Accessibility
-                            <div className='button'>BETA</div>
+                            <div className='button'>Comming...</div>
                         </a>
                     </div>
+                    <div className="navbar">
+                        <div className="title">
+                            Support
+                        </div>
+                        <a className="item" href="mailto:support@nftathleteclub.com">
+                            Contact Us
+                        </a>
+                        <a className="item" href='#team'>
+                            Developers
+                        </a>
+                        <Link className="item" to="https://drive.google.com/file/d/1LP9SVKWpAYGGJbtW_GLH0uj8fda1_ng4/view?usp=share_link">
+                            Documentation
+                        </Link>
+                        <Link className="item" to="https://docs.google.com/forms/">
+                            Integrations
+                        </Link>
+                    </div>   
                     <div className="navbar">
                         <div className="title">
                             Solutions
@@ -65,23 +85,7 @@ export default function Footer() {
                             FAQs
                         </a>
                     </div>
-                    <div className="navbar">
-                        <div className="title">
-                            Support
-                        </div>
-                        <a className="item">
-                            Contact Us
-                        </a>
-                        <a className="item">
-                            Developers
-                        </a>
-                        <a className="item">
-                            Documentation
-                        </a>
-                        <a className="item">
-                            Integrations
-                        </a>
-                    </div>                    
+                 
                     <div className="navbar">
                         <div className="title">
                             Company
@@ -98,7 +102,7 @@ export default function Footer() {
                         <a className="item">
                             Request Demo
                         </a>
-                    </div>                         
+                    </div>
                 </div>
             </div>
             <div className="divider" />
@@ -107,9 +111,15 @@ export default function Footer() {
                     NFT Athlete Club © 2023. All rights reserved.
                 </div>
                 <div className="right">
-                    <div className='item'>Terms</div>
-                    <div className='item'>Privacy</div>
-                    <div className='item'>Contact</div>
+                    <div className='item'>
+                        <img src={twitter}/>
+                    </div>
+                    <div className='item'>
+                        <img src={telegram}/>
+                    </div>
+                    <div className='item'>
+                        <img src={medium}/>
+                    </div>
                     <img src={world} className='item'/>
                     <div className='item'>EN</div>
                 </div>

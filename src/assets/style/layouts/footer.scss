@@ -34,7 +34,8 @@
             }
 
             .logo {
-                width: 96px;
+                width: 103px;
+                background: #0F172A;
 
                 @media (any-pointer: coarse) {
                     width: 240px;
@@ -86,7 +87,7 @@
                         background: #F3E8FF;
                         color: #6B21A8;
                         border-radius: 4px;
-                        width: 45px;
+                        width: 80px;
                         padding: 4px;
                         font-size: 12px;
                         line-height: 140%;
@@ -94,7 +95,7 @@
 
                         @media (any-pointer: coarse) {
                             font-size: 24px;
-                            width: 80px;
+                            width: 120px;
                             margin: 0px 24px;
                         }
                     }
@@ -145,6 +146,7 @@
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 140%;
+                cursor: pointer;
 
                 @media (any-pointer: coarse) {
                     font-size: 36px;
